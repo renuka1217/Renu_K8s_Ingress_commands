@@ -1,0 +1,1000 @@
+  618  kubectl describe pod my-mariadb-6c4df7ff66-4s77n
+  619  kubectl get pv
+  620  kubectl get pvc
+  621  ls -ltr
+  622  cd templates/
+  623  ls
+  624  cat persistentvolume.yaml 
+  625  cat persistentvolumeclaim.yaml 
+  626  kubectl get pods
+  627  ls -ltr
+  628  vi deployment.yaml
+  629  cd ..
+  630  vi values.yaml 
+  631  cd templates/
+  632  vi service.yaml 
+  633  cd ..
+  634  helm uninstall my-mariadb
+  635  helm install my-mariadb .
+  636  kubectl get pods
+  637  kubectl describe pod my-mariadb-6c4df7ff66-j9lz8
+  638  vi values.yaml 
+  639  kubectl get pods -o wide
+  640  vi values.yaml 
+  641  kubectl get pods
+  642  kubectl describe pod my-mariadb-6c4df7ff66-j9lz8
+  643  kubectl get pvc -n default
+  644  kubectl describe pod my-mariadb-6c4df7ff66-j9lz8
+  645  kubectl logs my-mariadb-6c4df7ff66-j9lz8
+  646  kubectl delete pod my-mariadb-6c4df7ff66-j9lz8
+  647  kubectl get pods
+  648  kubectl get pod my-mariadb-6c4df7ff66-mfctm -o wide
+  649  curl http://172.31.5.107:30080/login
+  650  curl http://172.31.5.95:30080/login
+  651  curl http://172.31.5.95:30080/users
+  652  netstat -a
+  653  sudo apt install net-tools
+  654  netstat -an | grep LISTEN
+  655  curl http://172.31.5.95:30080/users
+  656  mysql -h 172.31.5.95 -P 30306 -u root -p
+  657  curl http://172.31.5.95:30080/users
+  658  wget https://github.com/renuka1217/loginappbackendhelm.git
+  659  ls -ltr
+  660  helm plugin install https://github.com/renuka1217/loginappbackendhelm.git
+  661  rm -rf loginappbackendhelm.git
+  662  git clone https://github.com/renuka1217/loginappbackendhelm.git
+  663  ls -ltr
+  664  cd loginappbackendhelm/
+  665  ls
+  666  cd backend_chart/
+  667  ls -ltr
+  668  helm install my-backend .
+  669  kubectl delete configmap loginapp-env -n login-app
+  670  helm install my-backend .
+  671  kubectl get pods
+  672  kubectl get pods -n login-app
+  673  helm uninstall loginapp-env
+  674  helm uninstall my-backend
+  675  helm install my-backend .
+  676  kubectl get pods
+  677  kubectl get pods -n login-app
+  678  ls -ltr
+  679  cd templates/
+  680  ls -ltr
+  681  vi deployment.yaml
+  682  cd ..
+  683  helm upgrade my-backend . --namespace login-app
+  684  helm list -n login-app
+  685  helm install my-backend . --namespace login-app --create-namespace
+  686  helm uninstall my-backend . --namespace login-app --create-namespace
+  687  helm uninstall my-backend . --namespace login-app 
+  688  helm uninstall my-backend . --namespace login-app
+  689  helm uninstall my-backend .
+  690  helm install my-backend . --namespace login-app --create-namespace
+  691  kubectl get pods -n login-app
+  692  kubectl get loginapp-558b68dcc4-bdk26 -o wide
+  693  kubectl get loginapp-558b68dcc4-bdk26 -o wide -n login-app
+  694  kubectl get pod loginapp-558b68dcc4-bdk26 -o wide -n login-app
+  695  kubectl logs loginapp-558b68dcc4-bdk26
+  696  kubectl logs loginapp-558b68dcc4-bdk26 -n login-app
+  697  kubectl get pods
+  698  kubectl get pod my-mariadb-6c4df7ff66-mfctm -o ide
+  699  kubectl get pod my-mariadb-6c4df7ff66-mfctm -o wide
+  700  ls -ltr
+  701  cd templates/
+  702  ls -ltr
+  703  cd ..
+  704  cd templates/
+  705  vi configmap.yaml 
+  706  cd ..
+  707  vi values.yaml 
+  708  helm uninstall my-backend .
+  709  helm uninstall my-backend . -n login-app
+  710  helm install my-backend .
+  711  kubectl get pods -n login-app
+  712  kubectl logs loginapp-558b68dcc4-cg2x5
+  713  kubectl logs loginapp-558b68dcc4-cg2x5 -n login-app
+  714  ls -ltr
+  715  cd ..
+  716  ls
+  717  cd mariadb_helm
+  718  ls
+  719  cd ma
+  720  cd ..
+  721  cd loginappbackendhelm/loginappbackendhelm/
+  722  ls
+  723  cd ..
+  724  ls
+  725  cd backend_chart/
+  726  ls
+  727  cat values.yaml 
+  728  vi values.yaml 
+  729  cd ..
+  730  helm uninstall my-backend . -n login-app
+  731  helm uninstall my-backend .
+  732  helm install my-backend .
+  733  cd ..
+  734  ls
+  735  cd loginappbackendhelm/backend_chart/
+  736  helm install my-backend .
+  737  kubectl get pods
+  738  kubectl get pod my-mariadb-6c4df7ff66-mfctm -o wide
+  739  ls
+  740  vi values.yaml 
+  741  cd templates/
+  742  vi service.yaml 
+  743  cd ..
+  744  vi values.yaml 
+  745  helm uninstall my-backend .
+  746  helm install my-backend .
+  747  kubectl get pods
+  748  kubectl get pods -n login-app
+  749  kubectl logs loginapp-558b68dcc4-bm8r5
+  750  kubectl logs loginapp-558b68dcc4-bm8r5 -n login-app
+  751  git clone https://github.com/renuka1217/loginapp_helm.git
+  752  ls -ltr
+  753  cd loginapp_helm/loginapp_helm/
+  754  ls
+  755  cd ..
+  756  ls
+  757  helm install frontend .
+  758  helm lint .
+  759  cat values.yaml 
+  760  cat templates/deployment.yaml 
+  761  helm lint .
+  762  vi templates/deployment.yaml 
+  763  helm lint .
+  764  vi templates/deployment.yaml 
+  765  helm lint .
+  766  vi Chart.yaml 
+  767  helm install frontend .
+  768  kubectl get configmap loginapp-env -n login-app
+  769  helm install frontend .
+  770  ls -ltr
+  771  cd templates/
+  772  ls -ltr
+  773  rm -rf configmap.yaml
+  774  cd ..
+  775  helm install frontend .
+  776  kubectl get service loginapp -n login-app
+  777  cat templates/service.yaml 
+  778  cd ..
+  779  ls -ltr
+  780  cd loginappbackendhelm/
+  781  ls
+  782  cd backend_chart/
+  783  ls
+  784  cat templates/service.yaml 
+  785  cd ../..
+  786  cd loginapp_helm/loginapp_helm/
+  787  ls
+  788  cd ..
+  789  ls
+  790  cd templates/
+  791  vi service.yaml 
+  792  helm install frontend .
+  793  cat templates/service.yaml 
+  794  cat templates/deployment.yaml 
+  795  vi templates/deployment.yaml 
+  796  helm install frontend .
+  797  kubectl get pods -n login-app
+  798  kubectl logs loginappf-558b68dcc4-gg879
+  799  kubectl logs loginappf-558b68dcc4-gg879 -n login-app
+  800  ls -ltr
+  801  rm -rf loginapp_helm/
+  802  git clone https://github.com/renuka1217/helm_frontend.git
+  803  ls -ltr
+  804  cd helm_frontend/
+  805  ls -ltr
+  806  helm install .
+  807  ls 
+  808  cd helm_frontend/
+  809  helm install frontend .
+  810  kubectl get pods -n login-pp
+  811  kubectl get pods -n login-app
+  812  kubetl delete pod loginappf-558b68dcc4-gg879
+  813  kubectl delete pod loginappf-558b68dcc4-gg879
+  814  kubetl delete pod loginappf-558b68dcc4-gg879 -n login-app
+  815  kubectl delete pod loginappf-558b68dcc4-gg879 -n login-app
+  816  kubectl get pods -n login-app
+  817  kubectl describe pod loginappf-558b68dcc4-gzqvk -n login-app
+  818  kubectl get pods -n login-app -o custom-columns="NAME:.metadata.name,CONTROLLER:.metadata.ownerReferences[].kind" 
+  819  kubectl scale ReplicaSet loginappf-558b68dcc4-gzqvk -n login-app --replicas=0 
+  820  kubectl get deployment -n login-app
+  821  kubectl scale deployment loginappf -n login-app --replicas=0
+  822  kubectl get pods -n login-app
+  823  ls -ltr
+  824  helm install frontend .
+  825  helm list -n login-app
+  826  helm uninstall frontend -n login-app
+  827  helm install frontend . -n login-app
+  828  ls -ltr
+  829  vi templates/service.yaml 
+  830  vi values.yaml 
+  831  helm install frontend . -n login-app
+  832  vi templates/deployment.yaml 
+  833  helm uninstall frontend -n login-app
+  834  helm install frontend . -n login-app
+  835  kubectl get pods -n login-app
+  836  kubectl logs frontend-7fc4c6f975-q6hxp
+  837  kubectl logs frontend-7fc4c6f975-q6hxp -n login-app
+  838  ls -ltr
+  839  cat values.yaml 
+  840  kubectl get pods -n login-app
+  841  ls -ltr
+  842  cd helm_frontend/
+  843  ls
+  844  vi values.yaml 
+  845  cd ../loginappbackendhelm/
+  846  ls
+  847  cd backend_chart/
+  848  ls
+  849  vi values.yaml 
+  850  vi templates/service.yaml 
+  851  vi values.yaml 
+  852  vi templates/service.yaml 
+  853  vi values.yaml 
+  854  vi ../../helm_frontend/templates/service.yaml
+  855  vi ../../helm_frontend/values.yaml 
+  856  helm install frontend . -n login-app
+  857  helm uninstall frontend -n login-app
+  858  helm install frontend . -n login-app
+  859  cd ../..
+  860  cd helm_frontend/
+  861  helm install frontend . -n login-app
+  862  kubectl get pods
+  863  kubectl get pods -n loginapp
+  864  kubectl get pods -n login-app
+  865  kubectl get pods frontend-6c45cf55f9-kv996 -o wide
+  866  kubectl get pods frontend-6c45cf55f9-kv996 -o wide -n login-app
+  867  vi values.yaml 
+  868  cd ..
+  869  mkdir ingress
+  870  cd ingress/
+  871  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+  872  ls -ltr
+  873  cd loginappbackendhelm/
+  874  ls
+  875  cd backend_chart/
+  876  helm uninstall  . -n login-app
+  877  kubectl get helm -n login-app
+  878  kubectl get pods -n login-app
+  879  helm uninstall loginapp . -n login-app
+  880  helm install loginapp . -n login-app
+  881  helm uninstall my-backend . -n login-app
+  882  ls -ltr
+  883  helm list --all-namespaces
+  884  helm uninstall my-backend
+  885  helm uninstall frontend
+  886  helm uninstall frontend -n logi-app
+  887  helm list --all-namespaces
+  888  helm uninstall frontend -n login-app
+  889  helm install loginapp . -n login-app
+  890  cd ../.. . -n login-app
+  891  cd ../..
+  892  ls -ltr
+  893  cd helm_frontend/
+  894  helm install frontend . -n login-app
+  895  kubectl get ingress
+  896  kubectl get ingress -n login-app
+  897  cd ..
+  898  sudo su -
+  899  kubectl get pods
+  900  kubectl get pods -n login-app
+  901  ping renukafrontend.com
+  902  kubectl get deployments --all-namespaces -l app.kubernetes.io/name=ingress-nginx
+  903  kubectl get pod ingress-nginx-controller-cbc99dc56-g5zjq -o wide -n ingress-nginx
+  904  cd /etc
+  905  sudo su -
+  906  ping renukafrontend.com
+  907  kubectl logs ingress-nginx-controller-cbc99dc56-g5zjq -n ingress-nginx
+  908  kubectl get svc -n ingress-nginx
+  909  kubectl edit svc ingress-nginx-controller -n ingress-nginx
+  910  kubectl get nodes -o wide
+  911  kubectl get pods -n ingress-nginx
+  912  kubectl get pod ingress-nginx-controller-cbc99dc56-g5zjq -o wide
+  913  kubectl get pods ingress-nginx-controller-cbc99dc56-g5zjq -o wide
+  914  kubectl get pod ingress-nginx-controller-cbc99dc56-g5zjq -o wide -n ingress-nginx
+  915  kubectl port-forward -n ingress-nginx ingress-nginx-controller-cbc99dc56-g5zjq  8080:80
+  916  
+  917  kubectl get ingress -n login-app
+  918  kubectl describe ingress frontend-frotend-ingress -n login-app
+  919  kubectl edit svc ingress-nginx-controller -n ingress-nginx
+  920  kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/manifests/metallb.yaml
+  921  kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
+  922  cd metallb/
+  923  vi configmap.yaml 
+  924  kubectl get nodes
+  925  kubectl get nodes -o wide
+  926  kubectl apply -f configmap.yaml 
+  927  kubectl rollout restart deployment controller -n metallb-system
+  928  kubectl rollout restart daemonset speaker -n metallb-system
+  929  kubectl get svc -n ingress-nginx
+  930  kubectl get pods -n metallb-system
+  931  kubectl get ipaddresspool -n metallb-system
+  932  kubectl get l2advertisement -n metallb-system
+  933  vi metallb-config.yaml
+  934  kubectl apply -f metallb-config.yaml 
+  935  kubectl get ipaddresspool -n metallb-system
+  936  kubectl get l2advertisement -n metallb-system
+  937  kubectl rollout restart deployment controller -n metallb-system
+  938  kubectl rollout restart daemonset speaker -n metallb-system
+  939  kubectl describe svc ingress-nginx-controller -n ingress-nginx
+  940  kubectl get svc -n ingress-nginx
+  941  kubectl get nodes
+  942  kubectl get namespaces
+  943  kubectl get svc
+  944  kubectl get ingress
+  945  kubectl get ingress -n login-app
+  946  kubectl delete all --all -n metallb-system
+  947  kubectl delete namespace metallb-system
+  948  kubectl get ingress -n login-app
+  949  helm uninstall metallb -n metallb-system
+  950  kubectl delete namespace metallb-system
+  951  helm delete metallb --purge
+  952  kubectl get pods,deployments,daemonsets,svc -n metallb-system
+  953  kubectl get crds | grep metallb
+  954  kubectl get IPAddressPool -n metallb-system
+  955  kubectl get namespaces
+  956  kubectl get svc
+  957  kubectl get svc -n login-app
+  958  kubectl get ingress
+  959  kubectl get ingress ingress-nginx
+  960  ls -ltr
+  961  cd ingress
+  962  ls -ltr
+  963  history
+  964  kubectl get ingress -n login-app
+  965  cd ..
+  966  ls -ltr
+  967  cd helm_frontend
+  968  ls -ltr
+  969  cd 
+  970  find . metallb-config.yaml
+  971  kubectl get ingress -n login-app
+  972  kubectl delete ingress -n login-app
+  973  kubectl delete ingress frontend-frotend-ingress -n login-app
+  974  kubectl delete ingress loginapp-backend-ingress -n login-app
+  975  kubectl get ingress -n login-app
+  976  ls -ltr
+  977  kubectl get namespaces
+  978  kubectl get pods -n ingress-nginx
+  979  kubectl delete namespace nginx-ingress
+  980  kubectl delete namespace ingress-nginx
+  981  kubectl delete clusterrole nginx-ingress
+  982  kubectl delete clusterrolebinding nginx-ingress
+  983  kubectl delete clusterrole ingress-nginx
+  984  kubectl delete clusterrolebinding ingress-nginx
+  985  kubectl delete -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/v3.6.2/deploy/crds.yaml
+  986  kubectl get all,ingressclass,validatingwebhookconfiguration,crd | grep -E 'nginx|ingress'
+  987  kubectl patch svc <svc-name> -p '{"metadata":{"finalizers":[]}}' --type=merge
+  988  kubectl patch svc
+  989  kubectl delete ingressclass nginx
+  990  kubectl delete validatingwebhookconfiguration ingress-nginx-admission
+  991  kubectl get svc
+  992  kubectl get svc -n login-app
+  993  helm repo add nginx-stable https://helm.nginx.com/stable
+  994  helm repo update
+  995  kubectl create secret     docker-registry regcred     --docker-server=private-registry.nginx.com     --docker-username=$(cat nginx-repo.jwt)     --docker-password=none
+  996  kubectl create secret     generic license-token     --from-file=license.jwt=./nginx-repo.jwt     --type=nginx.com/license
+  997  ls -l nginx-repo.jwt
+  998  history
+  999  kubectl create namespace ingress-nginx
+ 1000  helm install ingress-release  nginx-stable/nginx-ingress   --namespace ingress-nginx --create-namespace
+ 1001  kubectl get pods,svc -n ingress-nginx
+ 1002  helm show values nginx-stable/nginx-ingress > nginx-values.yaml
+ 1003  ls -ltr
+ 1004  helm upgrade ingress-release nginx-stable/nginx-ingress   -n ingress-nginx -f nginx-values.yaml
+ 1005  kubectl get namespaces
+ 1006  kubectl get pods,svc -n ingress-nginx
+ 1007  history
+ 1008  helm uninstall ingress-release -n ingress-nginx
+ 1009  kubectl delete -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/<version>/deploy/crds.yaml
+ 1010  kubectl delete -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/<version>/deploy/crds-nap-waf.yaml
+ 1011  kubectl delete -f https://raw.githubusercontent.com/nginxinc/kubernetes-ingress/<version>/deploy/crds-nap-dos.yaml
+ 1012  kubectl delete -f config/crd/bases/crds.yaml
+ 1013  kubectl delete -f config/crd/bases/crds-nap-waf.yaml
+ 1014  kubectl delete -f config/crd/bases/crds-nap-dos.yaml
+ 1015  kubectl delete clusterrole nginx-ingress
+ 1016  kubectl delete clusterrolebinding nginx-ingress
+ 1017  kubectl delete namespace nginx-ingress
+ 1018  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+ 1019  helm search repo ingress-nginx --versions
+ 1020  CHART_VERSION="4.12.3"
+ 1021  APP_VERSION="1.12.3"
+ 1022  mkdir ./kubernetes/ingress/controller/nginx/manifests/
+ 1023  helm template ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --version ${CHART_VERSION} --namespace ingress-nginx > ./kubernetes/ingress/controller/nginx/manifests/nginx-ingress.${APP_VERSION}.yaml
+ 1024  CHART_VERSION="4.12.3"
+ 1025  APP_VERSION="1.12.3"
+ 1026  mkdir -p ./kubernetes/ingress/controller/nginx/manifests/
+ 1027  helm template ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --version ${CHART_VERSION} --namespace ingress-nginx > ./kubernetes/ingress/controller/nginx/manifests/nginx-ingress.${APP_VERSION}.yaml
+ 1028  kubectl create namespace ingress-nginx
+ 1029  kubectl apply -f ./kubernetes/ingress/controller/nginx/manifests/nginx-ingress.${APP_VERSION}.yaml
+ 1030  kubectl -n ingress-nginx get pods
+ 1031  kubectl -n ingress-nginx get svc
+ 1032  NAME                                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+ 1033  ingress-nginx-controller             LoadBalancer   10.96.130.21    <pending>     80:31011/TCP,443:31772/TCP   26m
+ 1034  ingress-nginx-controller-admission   ClusterIP      10.96.125.210   <none>        443/TCP                      26m
+ 1035  kubectl -n ingress-nginx get svc
+ 1036  kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller 443
+ 1037  kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller 444
+ 1038  kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller 8443:443
+ 1039  sudo lsof -i TCP:8443
+ 1040  pwdx 459
+ 1041  sudo pwdx 459
+ 1042  kubectl -n ingress-nginx port-forward svc/ingress-nginx-controller 9443:443
+ 1043  sudo lsof -i TCP:8443
+ 1044  sudo lsof -i TCP:443
+ 1045  kubectl -n ingress-nginx get svc
+ 1046  kubectl create ingress demo   --class=nginx   --rule="example.com/=demo-svc:80"   --namespace default
+ 1047  kubectl delete ingress demo
+ 1048  ls -ltr
+ 1049  cd loginappbackendhelm
+ 1050  ls -ltr
+ 1051  cd backend_chart/
+ 1052  ls -ltr
+ 1053  cd ../..
+ 1054  cd ingress/
+ 1055  ls -ltr
+ 1056  cd ../loginappbackendhelm/backend_chart/templates/
+ 1057  ls -ltr
+ 1058  cat ingress.yaml 
+ 1059  cat ../values.yaml 
+ 1060  helm upgrade loginapp .   --namespace login-app
+ 1061  cd ..
+ 1062  cd backend_chart/
+ 1063  helm upgrade loginapp .   --namespace login-app
+ 1064  kubectl get ingress -n login-app
+ 1065  kubectl get pod -n ingress-nginx
+ 1066  kubectl exec -it ingress-nginx-controller-757496f99b-mrj7l sh
+ 1067  kubectl exec -it ingress-nginx-controller-757496f99b-mrj7l bash
+ 1068  kubectl exec -it ingress-nginx-controller-757496f99b-mrj7l sh -n login-app
+ 1069  kubectl exec -it ingress-nginx-controller-757496f99b-mrj7l -n login-app sh 
+ 1070  kubectl exec -it ingress-nginx-controller-757496f99b-mrj7l -n ingress-nginx sh 
+ 1071  kubectl get ingress -n ingress-nginx
+ 1072  kubectl get ingress -n login-app
+ 1073  kubectl edit ingress loginapp-backend-ingress -n login-app
+ 1074  history
+ 1075  kubectl -n ingress-nginx get svc
+ 1076  kubectl edit svc ingress-nginx-controller -n ingress-nginx
+ 1077  kubect get ingress -n login-app
+ 1078  kubectl get ingress -n login-app
+ 1079  kubectl edit deploy ingress-nginx-controller
+ 1080  kubectl edit deploy ingress-nginx-controller -n ingress-nginx
+ 1081  kubectl get ingress -n login-app
+ 1082  ls
+ 1083  cd templates/
+ 1084  ls
+ 1085  kubectl delete ingress.yaml
+ 1086  kubectl get ingress -n login-app
+ 1087  kubectl delete ingress -n login-app
+ 1088  kubectl delete ingress loginapp-backend-ingress -n login-app
+ 1089  kubectl get ingress -n login-app
+ 1090  helm upgrade loginapp .   --namespace login-app
+ 1091  cd ..
+ 1092  helm upgrade loginapp .   --namespace login-app
+ 1093  kubectl get ingress -n login-app
+ 1094  kubectl -n ingress-nginx get pods
+ 1095  kubectl get ingressclass
+ 1096  minikube
+ 1097  kubeadm --version
+ 1098  kubectl --version
+ 1099  kubectl version
+ 1100  kubeadm version
+ 1101  kubectl cluster-info
+ 1102  kubectl version
+ 1103  kubectl get svc -n ingress-nginx
+ 1104  kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/manifests/metallb.yaml
+ 1105  kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.15.2/config/manifests/metallb-native.yaml
+ 1106  mkdir metallb
+ 1107  cd metallb/
+ 1108  ls -ltr
+ 1109  vi metallb-config.yaml 
+ 1110  vi configmap.yaml 
+ 1111  kubectl apply -f configmap.yaml 
+ 1112  kubectl expose deployment your-deployment --type=LoadBalancer --name=your-service
+ 1113  kubectl get deployments -n login-app
+ 1114  ls
+ 1115  cd ..
+ 1116  ls
+ 1117  cd kubectl expose deployment loginapp --type=LoadBalancer 
+ 1118  kubectl expose deployment loginapp --type=LoadBalancer --name=<service-name>
+ 1119  kubectl get svc -n login-app
+ 1120  kubectl expose deployment loginapp --type=LoadBalancer --name=loginapp
+ 1121  kubectl expose deployment loginapp --type=LoadBalancer --name=loginapp -n login-app
+ 1122  kubectl expose deployment loginapp --type=LoadBalancer --name=loginapprenuka -n login-app
+ 1123  kubectl get svc -n login-app
+ 1124  kubectl get ingress -n login-app
+ 1125  kubectl get svc -n login-app
+ 1126  kubectl get ingress -n login-app
+ 1127  kubectl get namespaces
+ 1128  kubectl get svc -n ingress-nginx
+ 1129  kubectl top
+ 1130  kubectl top pods --all-namespaces
+ 1131  labsuser@master:~$ kubectl top pods --all-namespaces
+ 1132  error: Metrics API not available
+ 1133  kubectl top nodes
+ 1134  kubectl top pods --all-namespaces
+ 1135  kubectl get deploy 
+ 1136  kubectl get deployment
+ 1137  kubectl get deployment coredns
+ 1138  kubectl get deployment coredns -n kube-system
+ 1139  kubectl get pods  -n kube-system
+ 1140  kubectl get pods -l k8s-app=kube-dns -n kube-system
+ 1141  kubectl get svc kube-dns -n kube-system
+ 1142  kubectl get endpoints kube-dns -n kube-system
+ 1143  kubectl describe endpoints kube-dns -n kube-system
+ 1144  kubectl get all -n ingress-nginx
+ 1145  kubectl get pod -n ingress-nginx
+ 1146  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.0/deploy/static/provider/cloud/deploy.yaml
+ 1147  kubectl get all -n ingress-nginx
+ 1148  kubectl get pod -n ingress-nginx
+ 1149  mkdir ingress1
+ 1150  cd ingress1
+ 1151  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ingress.key-out ingress.crt -subj "/CN=master.example.com/O=security"
+ 1152  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ingress.key-out ingress.crt -subj "/CN=master/O=security"
+ 1153  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ingress.key -out ingress.crt -subj "/CN=*.renuka.com/O=security"
+ 1154  ls
+ 1155  kubectl create secret tls tls-cert --key ingress.key --cert ingress.crt
+ 1156  ls
+ 1157  kubectl get secrets
+ 1158  cd ..
+ 1159  ls
+ 1160  cd loginappbackendhelm/
+ 1161  ls -ltr
+ 1162  cd backend_chart/
+ 1163  ls -ltr
+ 1164  cd templates/
+ 1165  ls -ltr
+ 1166  vi ingress.yaml 
+ 1167  cd ..
+ 1168  helm upgrade loginapp .   --namespace login-app
+ 1169  vi ingress.yaml 
+ 1170  cat ingress.yaml 
+ 1171  cat templates/ingress.yaml 
+ 1172  vi templates/ingress.yaml 
+ 1173  helm upgrade loginapp .   --namespace login-app
+ 1174  ip a | grep ens5
+ 1175  kubectl get ingress
+ 1176  kubectl get ingress -all namespaces
+ 1177  kubectl get ingress -all-namespaces
+ 1178  kubectl get ingress -n login-app
+ 1179  cd templates/
+ 1180  ls -ltr
+ 1181  cd ..
+ 1182  helm upgrade loginapp .   --namespace login-app
+ 1183  vi /etc/hosts
+ 1184  sudo vi /etc/hosts
+ 1185  kubectl get svc -n ingress-nginx
+ 1186  kubectl get pod -n ingress-nginx -o wide
+ 1187  kubectl get nodes -o wide
+ 1188  curl -kv https://loginapp.renuka.com:30360/test
+ 1189  curl -kv https://loginapp.renuka.com:30360/users
+ 1190  curl -kv https://loginapp.renuka.com:32359/users
+ 1191  cd ../../
+ 1192  cd ingress1
+ 1193  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ingress.key -out ingress.crt -subj "/CN=loginapp.renuka.com/O=security"
+ 1194  kubectl create secret tls tls-cert --key ingress.key --cert ingress.crt
+ 1195  kubectl delete secret tls‑cert
+ 1196  kubectl get ns
+ 1197  kubectl delete secret tls‑cert
+ 1198  kubectl delete secret tls-cert
+ 1199  kubectl create secret tls tls-cert --key ingress.key --cert ingress.crt
+ 1200  helm upgrade loginapp .   --namespace login-app
+ 1201  cd ..
+ 1202  curl -kv https://loginapp.renuka.com:32359/users
+ 1203  ls
+ 1204  cd loginappbackendhelm/
+ 1205  ls
+ 1206  cd backend_chart/
+ 1207  ls
+ 1208  cd templates/
+ 1209  cat ingress.yaml 
+ 1210  cd ..
+ 1211  helm upgrade loginapp .   --namespace login-app
+ 1212  curl -kv https://loginapp.renuka.com:32359/users
+ 1213  kubectl delete secret tls-cert
+ 1214  cd ../../ingress1
+ 1215  kubectl create secret tls tls-cert --key ingress.key --cert ingress.crt -n login-app
+ 1216  curl -kv https://loginapp.renuka.com:32359/users
+ 1217  ls
+ 1218  cd ..
+ 1219  ls
+ 1220  cd loginappbackendhelm/
+ 1221  ls
+ 1222  cd backend_chart/
+ 1223  cd templates/
+ 1224  ls
+ 1225  cat ingress.yaml 
+ 1226  cat service.yaml 
+ 1227  curl -kv https://loginapp.renuka.com:32359
+ 1228  curl -kv https://loginapp.renuka.com:32359/users
+ 1229  kubectl get pods
+ 1230  kubectl get all -n ingress-nginx
+ 1231  kubectl get logs ingress-nginx-controller-7454c5f7fb-j4lrv -n ingress-nginx
+ 1232  kubectl logs ingress-nginx-controller-7454c5f7fb-j4lrv -n ingress-nginx
+ 1233  kubectl logs -f ingress-nginx-controller-7454c5f7fb-j4lrv -n ingress-nginx 
+ 1234  kubectl get svc -n login-app
+ 1235  kubectl get nodes -o wide
+ 1236  kubectl get pods -o wide
+ 1237  kubectl get pods -o wide -n login-app
+ 1238  kubectl get pods -n login-app
+ 1239  kubectl get svc -n login-app
+ 1240  vi ingress.yaml 
+ 1241  helm upgrade loginapp .   --namespace login-app
+ 1242  cd ..
+ 1243  helm upgrade loginapp .   --namespace login-app
+ 1244  curl -kv https://loginapp.renuka.com:32359/users
+ 1245  kubectl get svc -n login-app
+ 1246  kubectl get nodes -n login-app
+ 1247  kubectl get svc -n ingress-nginx
+ 1248  cd ../..
+ 1249  ls
+ 1250  cd helm_frontend/
+ 1251  ls
+ 1252  vi values.yaml 
+ 1253  helm upgrade frontend .   --namespace login-app
+ 1254  cat templates/ingress.yaml 
+ 1255  cat values.yaml 
+ 1256  kubectl get svc -n login-app
+ 1257  kubectl get svc -n ingress-nginx
+ 1258  cat values.yaml 
+ 1259  kubectl get pods -n login-app
+ 1260  kubectl exec -it frontend-5cc54cf467-lqgmp sh -n login-app
+ 1261  kubectl get pods -n login-app
+ 1262  cat values.yaml 
+ 1263  kubectl get svc -n ingress-nginx
+ 1264  kubectl exec -it frontend-5cc54cf467-lqgmp sh -n login-app
+ 1265  kubectl logs -f frontend-5cc54cf467-lqgmp -n login-app
+ 1266  ls 
+ 1267  vi templates/ingress.yaml 
+ 1268  helm upgrade loginapp .   --namespace login-app
+ 1269  helm upgrade frontend .   --namespace login-app
+ 1270  cd ..
+ 1271  ls
+ 1272  cd loginappbackendhelm/
+ 1273  ls
+ 1274  cd backend_chart/
+ 1275  ls
+ 1276  vi templates/ingress.yaml 
+ 1277  helm upgrade loginapp .   --namespace login-app
+ 1278  vi templates/ingress.yaml 
+ 1279  kubectl get pods -n login-app
+ 1280  kubectl logs loginapp-558b68dcc4-wd85r
+ 1281  kubectl logs loginapp-558b68dcc4-wd85r -n login-app
+ 1282  kubectl get pods -n ingress-nginx
+ 1283  kubectl logs ingress-nginx-controller-7454c5f7fb-j4lrv
+ 1284  kubectl logs ingress-nginx-controller-7454c5f7fb-j4lrv -n ingress-nginx
+ 1285  sudo vi /etc/hosts
+ 1286  ls -ltr
+ 1287  cat values.yaml 
+ 1288  sudo vi /etc/hosts
+ 1289  cd ../..
+ 1290  ls
+ 1291  cd helm_frontend/
+ 1292  ls
+ 1293  vi values.yaml 
+ 1294  sudo vi /etc/hosts
+ 1295  kubectl logs ingress-nginx-controller-7454c5f7fb-j4lrv -n ingress-nginx
+ 1296  ls -ltr
+ 1297  cd helm_frontend/
+ 1298  ls -ltr
+ 1299  cd templates/
+ 1300  ls -ltr
+ 1301  cat ingress.yaml 
+ 1302  ls -ltr
+ 1303  cd helm_frontend/
+ 1304  ls
+ 1305  vi values.yaml 
+ 1306  cd ../loginappbackendhelm/
+ 1307  ls -ltr
+ 1308  cd backend_chart/
+ 1309  ls
+ 1310  vi values.yaml 
+ 1311  cd ../..
+ 1312  cd helm_frontend/
+ 1313  vi values.yaml 
+ 1314  cd ../loginappbackendhelm/backend_chart/templates/
+ 1315  vi service.yaml 
+ 1316  cd ..
+ 1317  vi values.yaml 
+ 1318  pwd
+ 1319  cd ../../helm_frontend/templates/
+ 1320  cd ..
+ 1321  vi values.yaml 
+ 1322  helm upgrade frontend .   --namespace login-app
+ 1323  vi values.yaml 
+ 1324  cd templates/
+ 1325  vi ingress.yaml 
+ 1326  cd ..
+ 1327  vi values.yaml 
+ 1328  vi templates/ingress.yaml 
+ 1329  kubectl get ingress ingress-nginx
+ 1330  kubectl get ingress -n ingress-nginx
+ 1331  kubectl get pods -n ingress-nginx
+ 1332  kubectl get pods -n ingress-nginx -o wide
+ 1333  kubectl get svc -n ingress-nginx -o wide
+ 1334  cd ..
+ 1335  kubectl get pods -n login-app
+ 1336  kubectl exec -it frontend-8667d95c54-dglz2 sh
+ 1337  kubectl exec -it frontend-8667d95c54-dglz2 -n login-app sh 
+ 1338  kubectl edit pod frontend-8667d95c54-dglz2 -n login-app
+ 1339  cd helm_frontend/
+ 1340  vi values.yaml 
+ 1341  helm upgrade frontend .   --namespace login-app
+ 1342  kubectl get pods -n login-app
+ 1343  kubectl exec -it frontend-6c45cf55f9-7d5mp -n login-app sh 
+ 1344  kubectl get pods -n login-app
+ 1345  kubectl logs loginapp-558b68dcc4-wd85r
+ 1346  kubectl logs loginapp-558b68dcc4-wd85r -n login-app
+ 1347  kubectl get svc -n login-app
+ 1348  vi values.yaml 
+ 1349  helm upgrade frontend .   --namespace login-app
+ 1350  kubectl get pods -n login-app
+ 1351  kubectl exec -it frontend-7fc4c6f975-cb7c5 -n login-app sh
+ 1352  vi values.yaml 
+ 1353  cd ..
+ 1354  cd loginappbackendhelm/
+ 1355  ls
+ 1356  kubectl get pods -n login-app -o wide
+ 1357  cd ../helm_frontend/
+ 1358  vi values.yaml 
+ 1359  helm upgrade frontend .   --namespace login-app
+ 1360  kubectl get pods -n login-app
+ 1361  kubectl exec -it frontend-757b6f4b67-2c8kr -n login-app
+ 1362  kubectl exec -it frontend-757b6f4b67-2c8kr -n login-app sh
+ 1363  kubectl get pods -n login-app
+ 1364  kubectl get pods -n login-app -o wide
+ 1365  ls -ltr
+ 1366  cd helm_frontend/
+ 1367  ls -ltr
+ 1368  vi values.yaml 
+ 1369  cd ..
+ 1370  cd loginappbackendhelm/
+ 1371  ls
+ 1372  cd backend_chart/
+ 1373  ls -ltr
+ 1374  cd templates/
+ 1375  ls -ltr
+ 1376  vi configmap.yaml 
+ 1377  cd ..
+ 1378  vi values.yaml 
+ 1379  cd templates/
+ 1380  vi configmap.yaml 
+ 1381  cd ..
+ 1382  vi values.yaml 
+ 1383  helm upgrade loginapp .   --namespace login-app
+ 1384  cd templates/
+ 1385  vi configmap.yaml 
+ 1386  cd ..
+ 1387  vi values.yaml 
+ 1388  vi templates/configmap.yaml 
+ 1389  helm upgrade loginapp .   --namespace login-app
+ 1390  kubectl get pods -n login-app -o wide
+ 1391  kubectl logs loginapp-558b68dcc4-wd85r
+ 1392  kubectl logs loginapp-558b68dcc4-wd85r -n login-app
+ 1393  kubectl get pods -n login-app -o wide
+ 1394  kubectl exec -it loginapp-558b68dcc4-wd85r -n login-app sh
+ 1395  kubectl exec -it frontend-757b6f4b67-2c8kr -n login-app sh
+ 1396  ls -ltr
+ 1397  vi nginx-values.yaml 
+ 1398  cd ingress
+ 1399  ls
+ 1400  ls -ltr
+ 1401  cd../ingress1
+ 1402  cd ../ingress
+ 1403  cd ../ingress1
+ 1404  ls
+ 1405  cd ..
+ 1406  cd helm_frontend/
+ 1407  ls -ltr
+ 1408  cat values.yaml 
+ 1409  kubectl get service -n login-app
+ 1410  kubectl get service -n login-app -o wide
+ 1411  vi values.yaml 
+ 1412  pwd
+ 1413  cd ../loginappbackendhelm/
+ 1414  ls -ltr
+ 1415  cd backend_chart/
+ 1416  ls -ltr
+ 1417  vi templates/service.yaml 
+ 1418  vi values.yaml 
+ 1419  cd ../../
+ 1420  ls
+ 1421  cd helm_frontend/
+ 1422  ls -ltr
+ 1423  vi values.yaml 
+ 1424  helm upgrade frontend .   --namespace login-app
+ 1425  kubectl get pods -n login-app
+ 1426  kubectl exec -it frontend-6c45cf55f9-qtnhs -n login-app sh
+ 1427  cd ..
+ 1428  cd loginappbackendhelm/
+ 1429  ls
+ 1430  cd backend_chart/
+ 1431  ls -ltr
+ 1432  vi values.yaml 
+ 1433  pwd
+ 1434  cd ../../helm_frontend/
+ 1435  ls -ltr
+ 1436  vi values.yaml 
+ 1437  cd ..
+ 1438  cd loginappbackendhelm/
+ 1439  ls
+ 1440  cd backend_chart/
+ 1441  ls -ltr
+ 1442  vi values.yaml 
+ 1443  kubectl get pods -n ingress-nginx
+ 1444  kubectl get svc -n ingress-nginx
+ 1445  kubectl get pods -n login-app
+ 1446  kubectl exec -it frontend-6c45cf55f9-qtnhs -n login-app sh
+ 1447  kubectl get svc -n login-app
+ 1448  kubectl exec -it frontend-6c45cf55f9-qtnhs -n login-app sh
+ 1449  cd ../../helm_frontend/
+ 1450  ls -ltr
+ 1451  vi values.yaml 
+ 1452  helm upgrade frontend .   --namespace login-app
+ 1453  kubectl get pods -n login-app
+ 1454  kubectl exec -it frontend-7fc4c6f975-dhrfj -n login-app sh
+ 1455  kubectl get pods -n login-app
+ 1456  kubectl get pods -n ingress-nginx
+ 1457  cd ..
+ 1458  cd loginappbackendhelm/
+ 1459  ls -ltr
+ 1460  cd backend_chart/
+ 1461  ls -ltr
+ 1462  vi values.yaml 
+ 1463  cd ../..
+ 1464  ls -ltr
+ 1465  cd helm_frontend/
+ 1466  vi values.yaml 
+ 1467  pwd
+ 1468  cd ../loginappbackendhelm/backend_chart/
+ 1469  cat values.yaml 
+ 1470  cd ../../helm_frontend/
+ 1471  ls -ltr
+ 1472  vi values.yaml 
+ 1473  kubectl get pods -n ingress-nginx
+ 1474  kubectl get pods -n ingress-nginx -o wide
+ 1475  kubectl get svc -n ingress-nginx -o wide
+ 1476  vi values.yaml 
+ 1477  helm upgrade frontend .   --namespace login-app
+ 1478  vi values.yaml 
+ 1479  helm upgrade frontend .   --namespace login-app
+ 1480  cd ..
+ 1481  ls -ltr
+ 1482  vi nginx-values.yaml 
+ 1483  kubectl get pods -n ingress-nginx -o wide
+ 1484  kubectl get pods -n login-app -o wide
+ 1485  kubectl exec -it frontend-cf5c98566-vcdjt -n login-app sh
+ 1486  cd loginappbackendhelm/
+ 1487  ls
+ 1488  cd loginappbackendhelm/
+ 1489  ls -ltr
+ 1490  cd ..
+ 1491  cd backend_chart/
+ 1492  ls -ltr
+ 1493  vi values.yaml 
+ 1494  kubectl get pods -n ingress-nginx
+ 1495  kubectl get svc -n ingress-nginx
+ 1496  cd ../..
+ 1497  cd helm_frontend/
+ 1498  vi values.yaml 
+ 1499  cat values.yaml 
+ 1500  cd ../loginappbackendhelm/backend_chart/
+ 1501  vi values.yaml 
+ 1502  cd templates/
+ 1503  vi ingress.yaml 
+ 1504  pwd
+ 1505  cd ../../../helm_frontend/
+ 1506  vi values.yaml 
+ 1507  curl -i -X OPTIONS   -H "Origin: http://renukafrontend.com:30360"   https://loginapp.renuka.com/users
+ 1508  kubectl -n ingress-nginx get svc
+ 1509  vi values.yaml 
+ 1510  'cd ..
+ 1511  exit
+ 1512  cd ..
+ 1513  cd loginappbackendhelm/backend_chart/templates/
+ 1514  vi ingress.yaml 
+ 1515  cd ..
+ 1516  helm upgrade loginapp .   --namespace login-app
+ 1517  cd ../..
+ 1518  kubectl get pods -n login-app
+ 1519  kubectl exec -it frontend-cf5c98566-vcdjt -n login-app sh
+ 1520  cd loginappbackendhelm/backend_chart/templates/
+ 1521  vi ingress.yaml 
+ 1522  kubectl get ingress -n ingress-nginx
+ 1523  kubectl get pods -n ingress-nginx
+ 1524  helm uninstall loginapp . -n login-app
+ 1525  cd ..
+ 1526  helm uninstall loginapp . -n login-app
+ 1527  helm list --all-namespaces
+ 1528  helm install loginapp . -n login-app
+ 1529  helm list --all-namespaces
+ 1530  ls
+ 1531  cd templates/
+ 1532  ls
+ 1533  vi ingress.yaml 
+ 1534  cd ..
+ 1535  ls
+ 1536  helm upgrade loginapp .   --namespace login-app
+ 1537  kubectl get pods -n login-app
+ 1538  kubctl logs loginapp-558b68dcc4-qpbql -n login-app
+ 1539  kubectl logs loginapp-558b68dcc4-qpbql -n login-app
+ 1540  kubectl get pods -n ingress-nginx
+ 1541  kubectl logs -f ingress-nginx-controller-7454c5f7fb-j4lrv -n ingress-nginx
+ 1542  cd ..
+ 1543  ls
+ 1544  cd ..
+ 1545  ls
+ 1546  cd loginappbackendhelmls
+ 1547  cd loginappbackendhelm
+ 1548  ls
+ 1549  cd ..
+ 1550  ls
+ 1551  cd ingress1/
+ 1552  ls
+ 1553  mkdir newcert
+ 1554  vi openssl.conf
+ 1555  mv openssl.conf newcert/
+ 1556  ls
+ 1557  cd newcert/
+ 1558  ls
+ 1559  openssl req -new -newkey rsa:2048 -nodes -keyout loginapp.key -out loginapp.csr -config openssl.cnf
+ 1560  ls
+ 1561  mv openssl.conf openssl.cnf
+ 1562  openssl req -new -newkey rsa:2048 -nodes -keyout loginapp.key -out loginapp.csr -config openssl.cnf
+ 1563  openssl x509 -req -days 365 -in loginapp.csr -signkey loginapp.key -out loginapp.crt -extensions v3_req -extfile openssl.cnf
+ 1564  openssl x509 -in loginapp.crt -text -noout | grep DNS
+ 1565  kubectl create secret tls tls-cert --cert=loginapp.crt --key=loginapp.key -n login-app --dry-run=client -o yaml | kubectl apply -f -
+ 1566  kubectl get secret tls-cert -n login-app
+ 1567  kubectl rollout restart deployment ingress-nginx-controller -n ingress-nginx
+ 1568  kubectl get pods -n ingress-nginx
+ 1569  kubectl logs -f ingress-nginx-controller-57f96565d7-wfght -n ingress-nginx
+ 1570  cd ../../
+ 1571  ls
+ 1572  cd loginappbackendhelm/
+ 1573  ls
+ 1574  cd templ
+ 1575  ls
+ 1576  cd backend_chart/
+ 1577  cd templates/
+ 1578  ls
+ 1579  vi ingress.yaml 
+ 1580  cd ../
+ 1581  ls
+ 1582  history
+ 1583  helm uninstall loginapp . -n login-app
+ 1584  helm install loginapp . -n login-app
+ 1585  kubectl logs -f ingress-nginx-controller-57f96565d7-wfght -n ingress-nginx
+ 1586  cd ..
+ 1587  ls
+ 1588  cd loginappbackendhelm/
+ 1589  ls
+ 1590  cd ..
+ 1591  ls
+ 1592  cd ..
+ 1593  ls
+ 1594  cd helm_frontend/
+ 1595  ls
+ 1596  vi values.yaml 
+ 1597  history
+ 1598  helm upgrade frontend .   --namespace login-app
+ 1599  ls
+ 1600  kubectl get pods -n login-app
+ 1601  kubectl exec -it frontend-5cc54cf467-8jkjc -n login-app sh
+ 1602  ls -ltr
+ 1603  tar -cvf helm_frontend.tar
+ 1604  tar -cvf helm_frontend.tar helm_frontend
+ 1605  ls -ltr
+ 1606  cd loginappbackendhelm/backend_chart/
+ 1607  ls -ltr
+ 1608  cd ..
+ 1609  tar -cvf backend_chart.tar backend_chart
+ 1610  cd ..
+ 1611  cd ingress1
+ 1612  ls -ltr
+ 1613  cd ..
+ 1614  tar -cvf ingress1.tar ingress1
+ 1615  history
+ 1616  history >> command.taxt
+ 1617  history >> command.txt
